@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Your DNA</title>
+</head>
+<body>
+
+<h1><div style="text-align: center;">Statistics of {{ NAME }}</div></h1>
+<div style="vertical-align:top;text-align: right">
+<a href=  '/'><button> Change file </button> </a>
+         </div>
+<h2>
+    <a href=  'transcribe.html'> Transcribe your DNA </a>
+</h2>
+
+<table style="width: auto">
+<tr><th>
+   <img src="{{url_for('static', filename='graph.png')}}" alt="A graph about your DNA">
+
+</th><th style="width: auto;vertical-align: top">
+                    {% for i in DATA[0]%}
+                            {{ i }}<br>
+                    {%endfor%}
+</th>    <th style="width: auto;vertical-align: top">Frequence <br>
+                    {% for i in DATA[1][1::]%}
+                            {{ i }}%<br>
+                    {%endfor%}
+
+</th>
+ </tr>
+                </table>
+<h4>
+    A,C,T,G are the four types of nucleotides that forms DNA <br>
+    N is used in case of no recognition
+    </h4>
+
+
+</body>
+</html>

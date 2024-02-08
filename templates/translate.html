@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>All the reading frames</title>
+</head>
+<body>
+<div style="text-align: center;"><h1>All the reading frames</h1></div>
+<table style="border:1px solid #000000;width:auto;text-align: center;">
+     <tr>
+         <th style="border:1px solid #000000">
+    <h2><a href=  'translate1.html'> See the RF1 </a> </h2>
+    <h2><a href=  'translate2.html'> See the RF2 </a> </h2>
+    <h2><a href=  'translate3.html'> See the RF3 </a> </h2>
+         </th>
+         <th style="border:1px solid #000000">
+    <h2><a href=  'translate-1.html'> See the RF-1 </a> </h2>
+    <h2><a href=  'translate-2.html'> See the RF-2 </a> </h2>
+    <h2><a href=  'translate-3.html'> See the RF-3 </a> </h2>
+             </th>
+     </tr>
+
+</table>
+<h4>During translation an AA chain is synthesized starting from its complementary RNA strand, every triplet (sequence of three bases)  synthesizes one AA following the genetic code </h4>
+             <img src="{{url_for('static', filename='standardgeneticcode.png')}}" alt="An image that show the genetic code" >
+                <h4> Every DNA (and RNA) sequence can be read three times for the positive strand and three times for the negative strand </h4>
+             <img src="{{url_for('static', filename='ReadingFrames.png')}}" alt="An image that explain reading frames" >
+
+
+
+
+

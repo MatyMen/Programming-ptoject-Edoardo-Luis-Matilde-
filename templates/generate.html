@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>positive strand</title>
+</head>
+<body>
+<div style="text-align: center"><h1>This is the positive strand of {{ NAME }}</h1></div>
+<table>
+     <tr>
+         <th>
+            <a href=  'generate-.html'> See the negative strand of your DNA</a><br>
+             <a href=  'visualise.html'> See the statistics about your DNA </a>
+<p class="box_break">  {{DNA}}  </p>
+     </th>
+          <th style="vertical-align:top;text-align: right">
+<a href=  '/'><button> Change file </button> </a>
+         </th>
+     </tr>
+</table>
+</body>
+</html>
