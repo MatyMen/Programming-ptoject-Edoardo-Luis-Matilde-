@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Your DNA</title>
+</head>
+<body>
+<div style="text-align: center;"><h1>Yours AA.chains of {{ NAME }}</h1></div>
+
+
+
+
+<table>
+    <tr>
+        <th style="vertical-align: top">
+
+
+ <p class="box_break"> {{AACHAIN1}}  </p>
+        </th><th  style="width: auto;vertical-align: top">
+    <table> <tr><th style="width: auto;vertical-align: top">
+<img src="{{url_for('static', filename='graphprot.png')}}" alt="A graph about your Protein">
+
+    </th></tr><table><tr><th style="width: auto;vertical-align: top">
+                    {% for i in DATA[0]%}
+                            {{ i }}<br>
+                    {%endfor%}
+</th>    <th style="width: auto;vertical-align: top">Frequence <br>
+
+                    {% for i in DATA[1][1::]%}
+
+                        {{ i }}%<br>
+                    {%endfor%}
+    </th> </tr> </table>
+    </th></tr>
+    </table>
+ </th>
+    </tr>
+
+    </table>
+</body>
+</html>

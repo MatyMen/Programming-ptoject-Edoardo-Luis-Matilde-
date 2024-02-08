@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>Your RNA</title>
+</head>
+<body>
+<div style="text-align: center;"><h1>This is the RNA of{{ NAME }}</h1></div>
+<h3>Every RNA sequence is transcribed starting from its complementary DNA strand<br>
+    For example the positive strand is transcribed starting from the negative DNA strand
+
+</h3>
+<table>
+     <tr>
+         <th>
+<h1> <a href=  'translate.html'> Translate your mRNA </a> </h1>
+<H2>Positive strand</H2>
+<p class="box_break">  {{RNA_POS}}  </p>
+    </th>
+         <th style="vertical-align:top;text-align: right">
+<a href=  '/'><button> Change file </button> </a>
+             <br>
+             <br>
+             <br>
+             <H2 style="vertical-align:top;text-align: left">Negative strand</H2>
+<p class="box_break" style="text-align:left"  >  {{RNA_NEG}} </p>
+         </th>
+     </tr>
+</table>
+</body>
+</html>

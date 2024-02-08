@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <title>proteins</title>
+</head>
+<body>
+<div style="text-align: center;"><h1>All possible proteins of {{ NAME }}</h1></div>
+<div style="vertical-align:top;text-align: right">
+<a href=  '/'><button> Change file </button> </a>
+         </div>
+
+
+<table style="width:auto;">
+     <tr>
+         <th>
+            <table style="border:1px solid #000000">
+                 <tr>
+                     <th style="border:1px solid #000000 ;text-align: center">
+                        RF and Index
+                     </th>
+                     <th style="border:1px solid #000000 ;text-align: center">
+                        Length
+
+
+                 </tr>
+                {% for i in DATA%}
+                  <tr style="vertical-align:top">
+                     <th style="border:1px solid #000000 ;text-align: center">
+                         <br>
+                        <h3><a href= 'protein12.html?orf={{ i[1] }}&index={{ i[2] }}'> {{ i[1] }}, {{ i[2] }} </a></h3>
+                      </th>
+                      <th style="border:1px solid #000000 ;text-align: center">
+                          <br>
+                        {{ i[3] }}aa
+                      </th>
+
+                  </tr>
+
+                {%endfor%}
+            </table>
+</th>
+        <th>
+
+         </th>
+     </tr>
+</table>
+</body>
+</html>
